@@ -332,7 +332,7 @@ header nav ul li a:hover {
 }
 #root .scrollBox-area .publishing .division .project a figure {
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 #root .scrollBox-area .publishing .division .project a figure img {
   width: 100%;
