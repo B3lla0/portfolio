@@ -36,10 +36,15 @@ img {
 }
 
 body {
+  -ms-overflow-style: none;
   height: 100%;
   position: relative;
   font-family: "SpoqaHanSansNeo-Regular";
   background-color: #3B465D;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 header {
@@ -199,18 +204,6 @@ header nav ul li a:hover {
   overflow-x: auto;
   white-space: nowrap;
   transition: 0.8s;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-points-x: repeat(100%);
-  -ms-scroll-snap-points-x: repeat(100%);
-  /* 2015 Firefox, Edge, IE */
-  scroll-snap-points-x: initial;
-  -ms-scroll-snap-points-x: initial;
-  scroll-snap-points-y: repeat(100%);
-  -ms-scroll-snap-points-y: repeat(100%);
 }
 #root .scrollBox-area article {
   min-width: 100%;

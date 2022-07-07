@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+// window.addEventListener('DOMContentLoaded', () => {
     // viewport
     function setScreenSize() {
         let vh = window.innerHeight * 0.01;
@@ -34,6 +34,20 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function setting(currentPageNumber, totalPageNumber, pages) {
+        this.currentPageNumber = currentPageNumber;
+        this.totalPageNumber = totalPageNumber;
+        this.pages = pages;
+        this.viewHeight = document.documentElement.clientHeight;
+    }
+    function viewResize() {
+        this.viewHeight = document.documentElement.clientHeight;
+        this.pages.style.height = this.viewHeight + 'px';
+        this.pages.style.top = - this.viewHeight * (this.currentPageNumber - 1) + 'px';
+    }
+
+    setting(1, 2, document.querySelector('.scrollBox-area'));
+    window.addEventListener('resize', viewResize);
 
     // window.addEventListener("wheel", function(e){
     //     e.preventDefault();
@@ -61,4 +75,4 @@ window.addEventListener('DOMContentLoaded', () => {
     //         scrollBox.style.transform = `translateY(-${s_pos}px)`;
     //     }, 40);
     // });
-});
+// });
