@@ -309,6 +309,7 @@ header nav ul li a:hover {
 }
 #root .scrollBox-area .publishing .division {
   display: flex;
+  width: 50%;
 }
 #root .scrollBox-area .publishing .division .project {
   display: flex;

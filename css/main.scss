@@ -83,10 +83,14 @@ img {
 }
 
 body {
+    -ms-overflow-style: none;
     height: 100%;
     position: relative;
     font-family: 'SpoqaHanSansNeo-Regular';
     background-color: $bgColor;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -226,17 +230,6 @@ header {
         overflow-x: auto;
         white-space: nowrap;
         transition: 0.8s;
-        scroll-snap-type: y mandatory;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: mandatory;
-        -ms-scroll-snap-type: mandatory;
-        scroll-snap-points-x: repeat(100%);
-        -ms-scroll-snap-points-x: repeat(100%);
-        /* 2015 Firefox, Edge, IE */
-        scroll-snap-points-x: initial;
-        -ms-scroll-snap-points-x: initial;
-        scroll-snap-points-y: repeat(100%);
-        -ms-scroll-snap-points-y: repeat(100%);
         article {
             min-width: 100%;
             min-height: 100%;
@@ -341,6 +334,7 @@ header {
             transition: top 1s;
             .division {
                 display: flex;
+                width: 50%;
                 .project {
                     display: flex;
                     width: 50%;
