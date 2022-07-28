@@ -36,56 +36,48 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', setScreenSize);
 
     // fullpage scroll
-    // const scrollSection = document.querySelectorAll('.scrollSection');
-    // const sectionCount = scrollSection.length;
-    // scrollSection.forEach(function(item, index) {
-    //     item.addEventListener('wheel', function(event) {
-    //         event.preventDefault();
-    //         let delta = 0;
-    //         if (!event) event = window.event;
-    //         if (event.wheelDelta) {
-    //             delta = event.wheelDelta / 120;
-    //             if (window.opera) delta = -delta;
-    //         } 
-    //         else if (event.detail)
-    //         delta = -event.detail / 3;
-    //         let moveTop = window.scrollY;
-    //         let elmSelector = scrollSection[index];
-    //         if (delta < 0){
-    //             if (elmSelector !== sectionCount - 1){
-    //                 try{
-    //                     moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
-    //                 }catch(e){}
-    //             }
-    //         } else {
-    //             if (elmSelector !== 0){
-    //                 try{
-    //                     moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
-    //                 }catch(e){}
-    //             }
-    //         }
-    //         window.scrollTo({
-    //             top: moveTop,
-    //             left:0,
-    //             behavior:'smooth'
-    //         });
-    //     });
-    // });
-
-    // header nav scroll move animation
-    const headerNav = document.querySelectorAll('.header-nav');
-
-    for (h = 0; h < headerNav.length; h++) {
-        headerNav[h].addEventListener('click', (e) => {
-            const targetSection = e.target.getAttribute('href');
+    const scrollSection = document.querySelectorAll('.scrollSection');
+    const sectionCount = scrollSection.length;
+    scrollSection.forEach(function(item, index) {
+        item.addEventListener('wheel', function(event) {
+            event.preventDefault();
+            let delta = 0;
+            if (!event) event = window.event;
+            if (event.wheelDelta) {
+                delta = event.wheelDelta / 120;
+                if (window.opera) delta = -delta;
+            } 
+            else if (event.detail)
+            delta = -event.detail / 3;
+            let moveTop = window.scrollY;
+            let elmSelector = scrollSection[index];
+            if (delta < 0){
+                if (elmSelector !== sectionCount - 1){
+                    try{
+                        moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
+                    }catch(e){}
+                }
+            } else {
+                if (elmSelector !== 0){
+                    try{
+                        moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
+                    }catch(e){}
+                }
+            }
+            window.scrollTo({
+                top: moveTop,
+                left:0,
+                behavior:'smooth'
+            });
         });
-    }
+    });
 
-    // test
+    // about animation
     window.addEventListener('scroll', () => {
         const contentHeight = document.querySelector('.main-visual');
-        const contentNowHeight = contentHeight.clientHeight;
+        const contentNowHeight = contentHeight.clientHeight / 2;
         const contentAbout = document.querySelector('.about');
+        const headerNav = document.querySelectorAll('.header-nav');
         let nowScroll = window.scrollY;
 
         if (nowScroll >= contentNowHeight) {
