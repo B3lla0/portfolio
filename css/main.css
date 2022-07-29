@@ -171,6 +171,10 @@ img {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   -ms-overflow-style: none;
   height: 100vh;
@@ -544,8 +548,14 @@ header nav ul li a:hover {
   margin-bottom: 20px;
   border-bottom: 1px solid #fff;
 }
+#root .about section.profile-area .menu-wrap ul li a {
+  position: relative;
+}
 #root .about section.profile-area .menu-wrap ul li a:hover {
   color: #346EE8;
+}
+#root .about section.profile-area .menu-wrap ul li a:hover span {
+  display: block;
 }
 #root .about section.profile-area .menu-wrap ul li a i {
   width: 46px;
@@ -555,6 +565,15 @@ header nav ul li a:hover {
   width: 46px;
   height: 48px;
   margin-right: 40px;
+}
+#root .about section.profile-area .menu-wrap ul li a span {
+  position: absolute;
+  right: -50px;
+  bottom: 50%;
+  display: none;
+  font-size: 20px;
+  text-align: right;
+  transform: translate(-50%);
 }
 #root .scrollBox-area {
   width: 100%;

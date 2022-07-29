@@ -107,6 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
         closeIcon.style.display = 'none';
     });
 
+
     // about menu img src change
     const aboutIcon = document.querySelector('.blog-icon');
     const blog = aboutIcon.parentNode;
@@ -117,3 +118,4 @@ window.addEventListener('DOMContentLoaded', () => {
         aboutIcon.src = './images/blog_icon.svg';
     });
 });
+
