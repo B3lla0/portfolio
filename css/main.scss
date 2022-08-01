@@ -591,14 +591,29 @@ header {
                     font-size: 48px;
                     ul {
                         li {
+                            position: relative;
                             padding-bottom: 20px;
                             margin-bottom: 20px;
                             border-bottom: 1px solid #fff;
                             a {
                                 display: block;
                                 position: relative;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: -21px;
+                                    left: 0;
+                                    width: 0;
+                                    height: 1px;
+                                    border-bottom: 2px solid #346EE8;
+                                    transition: all .5s;
+                                }
                                 &:hover {
                                     color: #346EE8;
+                                    &::after {
+                                        width: 100%;
+                                        // transition: all .5s;
+                                    }
                                     span {
                                         display: block;
                                     }
@@ -613,10 +628,10 @@ header {
                                     margin-right: 40px;
                                 }
                                 span {
+                                    display: none;
                                     position: absolute;
                                     right: 0;
                                     bottom: 0;
-                                    display: none;
                                     font-size: 20px;
                                     text-align: right;
                                 }

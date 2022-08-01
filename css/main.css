@@ -544,6 +544,7 @@ header nav ul li a:hover {
   font-size: 48px;
 }
 #root .about section.profile-area .menu-wrap ul li {
+  position: relative;
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #fff;
@@ -552,8 +553,21 @@ header nav ul li a:hover {
   display: block;
   position: relative;
 }
+#root .about section.profile-area .menu-wrap ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  border-bottom: 2px solid #346EE8;
+  transition: all 0.5s;
+}
 #root .about section.profile-area .menu-wrap ul li a:hover {
   color: #346EE8;
+}
+#root .about section.profile-area .menu-wrap ul li a:hover::after {
+  width: 100%;
 }
 #root .about section.profile-area .menu-wrap ul li a:hover span {
   display: block;
@@ -568,10 +582,10 @@ header nav ul li a:hover {
   margin-right: 40px;
 }
 #root .about section.profile-area .menu-wrap ul li a span {
+  display: none;
   position: absolute;
   right: 0;
   bottom: 0;
-  display: none;
   font-size: 20px;
   text-align: right;
 }
