@@ -9,7 +9,8 @@
 $bgColor: #3B465D;
 $pointColor: #e9e8d4;
 
-$circle-size: 100px;
+$circle-size: 150px;
+$circle-size-mobil: 100px;
 $increment: 180deg / 100;
 
 // mixin
@@ -57,6 +58,15 @@ $increment: 180deg / 100;
     width: 100%;
     height: 100%;
     background-color: #346EE8;
+}
+@mixin progressBarSliceMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $circle-size-mobil;
+    height: $circle-size-mobil;
+    clip: rect(0, $circle-size-mobil/2, $circle-size-mobil, 0);
+    overflow: hidden;
 }
 
 // animation
@@ -198,6 +208,9 @@ img {
     width: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     -ms-overflow-style: none;
     height: 100vh;
@@ -495,7 +508,7 @@ header {
                             transform: translate(-50%, -50%);
                             z-index: 5;
                             &.percentage {
-                                top: 140px;
+                                top: 180px;
                             }
                         }
                         &:last-of-type {
@@ -534,8 +547,8 @@ header {
                             
                         }
                         .overlay {
-                            width: $circle-size - 20px;
-                            height: $circle-size - 20px;
+                            width: $circle-size - 40px;
+                            height: $circle-size - 40px;
                             position: absolute;
                             top: 50%;
                             left: 50%;
@@ -547,7 +560,7 @@ header {
                 }
             }
             &.profile-area {
-                padding: 0 60px 0 100px;
+                padding: 0 100px 0 100px;
                 .profile-wrap {
                     margin-bottom: 80px;
                     p {
@@ -582,8 +595,13 @@ header {
                             margin-bottom: 20px;
                             border-bottom: 1px solid #fff;
                             a {
+                                display: block;
+                                position: relative;
                                 &:hover {
                                     color: #346EE8;
+                                    span {
+                                        display: block;
+                                    }
                                 }
                                 i {
                                     width: 46px;
@@ -593,6 +611,14 @@ header {
                                     width: 46px;
                                     height: 48px;
                                     margin-right: 40px;
+                                }
+                                span {
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                    display: none;
+                                    font-size: 20px;
+                                    text-align: right;
                                 }
                             }
                         }
@@ -909,6 +935,48 @@ header {
                 }
                 &.copyright-text {
                     left: -60px;
+                }
+            }
+        }
+        .about {
+            &.on {
+                section {
+                    &.state-area {
+                        .state {
+                            .state-item {
+                                .progress-bar {
+                                    width: $circle-size-mobil;
+                                    height: $circle-size-mobil;
+                                    .slice-left {
+                                        @include progressBarSliceMobile();
+                                        .fill {
+                                            @include progressBarFill();
+                                            transform: rotate(180deg);
+                                            clip: rect(0, $circle-size-mobil/2, $circle-size-mobil, 0);
+                                        }
+                                            }
+                                            .slice-right {
+                                                @include progressBarSliceMobile();
+                                                clip: rect(0, $circle-size-mobil, $circle-size-mobil, $circle-size-mobil/2);
+                                                .fill {
+                                            @include progressBarFill();
+                                            clip: rect(0, $circle-size-mobil/2, $circle-size-mobil, 0);
+                                        }
+                                    }
+                                    
+                                }
+                                span {
+                                    &.percentage {
+                                        top: 120px;
+                                    }
+                                }
+                                .overlay {
+                                    width: $circle-size-mobil - 20px;
+                                    height: $circle-size-mobil - 20px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

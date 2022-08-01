@@ -452,7 +452,7 @@ header nav ul li a:hover {
   z-index: 5;
 }
 #root .about section.state-area .state .state-item span.percentage {
-  top: 140px;
+  top: 180px;
 }
 #root .about section.state-area .state .state-item:last-of-type .progress-bar .slice-left .fill {
   -webkit-animation: progressAni80 1s linear;
@@ -460,8 +460,8 @@ header nav ul li a:hover {
 }
 #root .about section.state-area .state .state-item .progress-bar {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-color: #D9D9D9;
   border-radius: 50%;
   overflow: hidden;
@@ -471,9 +471,9 @@ header nav ul li a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
-  clip: rect(0, 50px, 100px, 0);
+  width: 150px;
+  height: 150px;
+  clip: rect(0, 75px, 150px, 0);
   overflow: hidden;
 }
 #root .about section.state-area .state .state-item .progress-bar .slice-left .fill {
@@ -482,28 +482,28 @@ header nav ul li a:hover {
   height: 100%;
   background-color: #346EE8;
   transform: rotate(180deg);
-  clip: rect(0, 50px, 100px, 0);
+  clip: rect(0, 75px, 150px, 0);
 }
 #root .about section.state-area .state .state-item .progress-bar .slice-right {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
-  clip: rect(0, 50px, 100px, 0);
+  width: 150px;
+  height: 150px;
+  clip: rect(0, 75px, 150px, 0);
   overflow: hidden;
-  clip: rect(0, 100px, 100px, 50px);
+  clip: rect(0, 150px, 150px, 75px);
 }
 #root .about section.state-area .state .state-item .progress-bar .slice-right .fill {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: #346EE8;
-  clip: rect(0, 50px, 100px, 0);
+  clip: rect(0, 75px, 150px, 0);
 }
 #root .about section.state-area .state .state-item .overlay {
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -512,7 +512,7 @@ header nav ul li a:hover {
   transform: translate(-50%, -50%);
 }
 #root .about section.profile-area {
-  padding: 0 60px 0 100px;
+  padding: 0 100px 0 100px;
 }
 #root .about section.profile-area .profile-wrap {
   margin-bottom: 80px;
@@ -549,6 +549,7 @@ header nav ul li a:hover {
   border-bottom: 1px solid #fff;
 }
 #root .about section.profile-area .menu-wrap ul li a {
+  display: block;
   position: relative;
 }
 #root .about section.profile-area .menu-wrap ul li a:hover {
@@ -568,12 +569,11 @@ header nav ul li a:hover {
 }
 #root .about section.profile-area .menu-wrap ul li a span {
   position: absolute;
-  right: -50px;
-  bottom: 50%;
+  right: 0;
+  bottom: 0;
   display: none;
   font-size: 20px;
   text-align: right;
-  transform: translate(-50%);
 }
 #root .scrollBox-area {
   width: 100%;
@@ -863,6 +863,51 @@ header nav ul li a:hover {
   }
   #root .left-text span.copyright-text {
     left: -60px;
+  }
+  #root .about.on section.state-area .state .state-item .progress-bar {
+    width: 100px;
+    height: 100px;
+  }
+  #root .about.on section.state-area .state .state-item .progress-bar .slice-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    clip: rect(0, 50px, 100px, 0);
+    overflow: hidden;
+  }
+  #root .about.on section.state-area .state .state-item .progress-bar .slice-left .fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #346EE8;
+    transform: rotate(180deg);
+    clip: rect(0, 50px, 100px, 0);
+  }
+  #root .about.on section.state-area .state .state-item .progress-bar .slice-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    clip: rect(0, 50px, 100px, 0);
+    overflow: hidden;
+    clip: rect(0, 100px, 100px, 50px);
+  }
+  #root .about.on section.state-area .state .state-item .progress-bar .slice-right .fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #346EE8;
+    clip: rect(0, 50px, 100px, 0);
+  }
+  #root .about.on section.state-area .state .state-item span.percentage {
+    top: 120px;
+  }
+  #root .about.on section.state-area .state .state-item .overlay {
+    width: 80px;
+    height: 80px;
   }
   #root .scrollBox-area .main-visual section .word-box {
     left: 15%;
