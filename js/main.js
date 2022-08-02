@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // fixed nav show
     const closeIcon = document.querySelector('.close-icon');
     const fixedNav = document.querySelector('.fixed-nav');
-    const fixedNavItem = document.querySelector('.fixed-nav-item');
+    const fixedNavItem = document.querySelectorAll('.fixed-nav-item');
     const navWrap = document.querySelector('.fixed-nav-wrap');
     const navActiveIcon = document.querySelector('.mobile-nav');
 
@@ -108,9 +108,13 @@ window.addEventListener('DOMContentLoaded', () => {
         closeIcon.style.display = 'none';
     });
 
-    fixedNavItem.addEventListener('click', () => {
-        fixedNav.classList.toggle('show');
-    });
+    for (let i = 0; i < fixedNavItem.length; i++) {
+        fixedNavItem[i].addEventListener('click', () => {
+            fixedNav.classList.toggle('show');
+            navWrap.classList.toggle('ani');
+            closeIcon.style.display = 'none';
+        });
+    }
 
     console.log(navWrap.children);
 
