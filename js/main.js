@@ -90,6 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // fixed nav show
     const closeIcon = document.querySelector('.close-icon');
     const fixedNav = document.querySelector('.fixed-nav');
+    const fixedNavItem = document.querySelector('.fixed-nav-item');
     const navWrap = document.querySelector('.fixed-nav-wrap');
     const navActiveIcon = document.querySelector('.mobile-nav');
 
@@ -107,6 +108,11 @@ window.addEventListener('DOMContentLoaded', () => {
         closeIcon.style.display = 'none';
     });
 
+    fixedNavItem.addEventListener('click', () => {
+        fixedNav.classList.toggle('show');
+    });
+
+    console.log(navWrap.children);
 
     // about menu img src change
     const aboutIcon = document.querySelector('.blog-icon');
