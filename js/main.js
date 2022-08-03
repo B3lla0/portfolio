@@ -72,6 +72,21 @@ window.addEventListener('DOMContentLoaded', () => {
     //     });
     // });
 
+    // scroll animation
+    const saTriggerMargin = 100;
+    const objectList = document.querySelectorAll('.obj');
+    const scrollAni = function() {
+        for(const element of objectList) {
+            if(!element.classList.contains('show')) {
+                if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+                    element.classList.add('show');
+                }
+            }
+        }
+    }
+
+    window.addEventListener('scroll', scrollAni);
+
     // about animation
     window.addEventListener('scroll', () => {
         const contentHeight = document.querySelector('.main-visual');
@@ -115,8 +130,6 @@ window.addEventListener('DOMContentLoaded', () => {
             closeIcon.style.display = 'none';
         });
     }
-
-    console.log(navWrap.children);
 
     // about menu img src change
     const aboutIcon = document.querySelector('.blog-icon');

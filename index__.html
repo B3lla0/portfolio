@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://kit.fontawesome.com/380a32f3b8.js" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <i class="fa-solid fa-bars menu-icon"></i>
+        <nav>
+            <ul>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="https://github.com/B3lla0" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a></li>
+                <li><a href="https://mail.google.com/mail/u/0/?fs=1&to=sjin09300@gmail.com&tf=cm" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="root">
+        <article class="profile">
+            <i class="fa-solid fa-xmark close"></i>
+            <img src="./images/background_img.jpg" />
+            <p>Web Publisher</p>
+            <p>
+                안녕하세요. 웹 퍼블리셔 고수진입니다.<br />
+                CSS와 Javascript를 활용한
+                동적인 모션에 관심이 많으며,
+                사용자의 편리성을 고민하는 것을 좋아합니다.<br /><br />
+
+                좋아하는 일을 끊임없이 노력하여<br />
+                잘 해내는 것이 제 목표입니다.
+            </p>
+            <div class="state">
+                <span>HTML5</span>
+                <div class="progress-bar"></div>
+                <span>CSS3</span>
+                <div class="progress-bar"></div>
+                <span>JAVASCRIPT / JQUERY</span>
+                <div class="progress-bar"></div>
+            </div>
+        </article>
+        <article id ="scrollBox" class="scrollBox-area">
+            <article id="main" class="main-visual scrollSection">
+                <section>
+                    <div class="word-box">
+                        <div class="word-line">
+                            <div class="mask">
+                                <p class="title delay1">Welcome</p>
+                            </div>
+                            <div class="mask">
+                                <p class="title delay2">to</p>
+                            </div>
+                        </div>
+                        <div class="word-line">
+                            <div class="mask">
+                                <p class="title delay3">SJ</p>
+                            </div>
+                            <div class="mask">
+                                <p class="title delay4">Web portfolio</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <span>scroll</span>
+            </article>
+            <article id="project" class="publishing scrollSection">
+                <section class="division">
+                    <section class="project odd">
+                        <a href="http://jeniesko.com/samsung/index.html" target="_blank">
+                            <figure>
+                                <img src="./images/se.png" alt="" />
+                            </figure>
+                            <div></div>
+                        </a>
+                        <div class="desc">
+                            <div class="desc-inner">
+                                <a href="http://jeniesko.com/samsung/index.html" target="_blank">
+                                    <span>01</span>
+                                    <span>Samsung E.M</span>
+                                </a>
+                            </div>
+                            <p>Standard&Accessibility Web</p>
+                            <!-- <p>웹 표준성, 접근성, 호환성에 만족하도록 제작하였습니다.</p> -->
+                        </div>
+                    </section>
+                    <section class="project even">
+                        <a href="http://jeniesko.com/cjone/index.html" target="_blank">
+                            <figure>
+                                <img src="./images/cjone.png" alt="" />
+                            </figure>
+                            <div></div>
+                        </a>
+                        <div class="desc">
+                            <div class="desc-inner">
+                                <a href="http://jeniesko.com/cjone/index.html" target="_blank">
+                                    <span>02</span>
+                                    <span>CJ ONE</span>
+                                </a>
+                            </div>
+                            <p>Responsive Web site</p>
+                        </div>
+                    </section>
+                </section>
+                <section class="division">
+                    <section class="project odd">
+                        <a href="http://jeniesko.com/bobbi.html" target="_blank">
+                            <figure>
+                                <img src="./images/bobbibrown.png" alt="" />
+                            </figure>
+                            <div></div>
+                        </a>
+                        <div class="desc">
+                            <div class="desc-inner">
+                                <a href="http://jeniesko.com/bobbi.html" target="_blank">
+                                    <span>03</span>
+                                    <span>BOBBI BROWN</span>
+                                </a>
+                            </div>
+                            <p>Web site Re-design</p>
+                        </div>
+                    </section>
+                    <section class="project even">
+                        <a href="https://sujin94k05.github.io/Kakao_react/#/" target="_blank">
+                            <figure>
+                                <img src="./images/kakao.png" alt="" />
+                            </figure>
+                            <div></div>
+                        </a>
+                        <div class="desc">
+                            <div class="desc-inner">
+                                <a href="https://sujin94k05.github.io/Kakao_react/#/" target="_blank">
+                                    <span>04</span>
+                                    <span>KAKAO</span>
+                                </a>
+                            </div>
+                            <p>Kakao React</p>
+                        </div>
+                    </section>
+                </section>
+            </article>
+        </article>
+    </main>
+    <footer>
+        <!-- <p>© Kosujin Portfolio 2022</p> -->
+    </footer>
+</body>
+</html>
