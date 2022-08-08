@@ -35,6 +35,19 @@ window.addEventListener('DOMContentLoaded', () => {
     setScreenSize();
     window.addEventListener('resize', setScreenSize);
 
+    // 메인영역 물결효과
+    function ripplesAni() {
+        rippleAniTimer = setTimeout(function() {
+            $(".main-visual").ripples({
+                dropRadius: 30,
+                resolution: 200,
+                perturbance: 0.03,
+            });
+        }, 3000);
+    }
+
+    ripplesAni();
+
     // fullpage scroll
     // const scrollSection = document.querySelectorAll('.scrollSection');
     // const sectionCount = scrollSection.length;
@@ -86,13 +99,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', scrollAni);
-
-    // 메인영역 물결효과
-    $(".main-visual").ripples({
-        dropRadius: 30,
-        resolution: 200,
-        perturbance: 0.03,
-    });
 
     // about animation
     window.addEventListener('scroll', () => {
