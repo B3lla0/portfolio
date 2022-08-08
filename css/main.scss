@@ -99,6 +99,14 @@ $increment: 180deg / 100;
         width: 0;
     }
 }
+@keyframes lineAni {
+    from {
+        width: 0;
+    }
+    to {
+        width: 260px;
+    }
+}
 @keyframes progressAni {
     from {
         transform: rotate(0);
@@ -441,6 +449,27 @@ header {
                         margin-bottom: 40px;
                         &:last-of-type {
                             margin-bottom: 0;
+                        }
+                        a {
+                            position: relative;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 0;
+                                height: 80px;
+                                background-image: url(../images/under_line.png);
+                                background-position: 0% 50%;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                transition: width 0.1s cubic-bezier(0.61, 0.49, 0.58, 1);
+                            }
+                            &:hover {
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
                 }
