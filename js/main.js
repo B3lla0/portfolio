@@ -87,6 +87,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', scrollAni);
 
+    // 메인영역 물결효과
+    $(".main-visual").ripples({
+        dropRadius: 30,
+        resolution: 200,
+        perturbance: 0.03,
+    });
+
     // about animation
     window.addEventListener('scroll', () => {
         const contentHeight = document.querySelector('.main-visual');
