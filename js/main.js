@@ -114,7 +114,7 @@ window.addEventListener('DOMContentLoaded', () => {
         setTimeout(function() {
             navWrap.classList.toggle('ani');
             closeIcon.style.display = 'block';
-        }, 1000);
+        }, 500);
     });
 
     closeIcon.addEventListener('click', () => {

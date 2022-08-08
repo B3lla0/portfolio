@@ -11,17 +11,11 @@
     transform: scale(0.5);
     border-radius: 100%;
   }
-  60% {
-    transform: scale(0.4);
-  }
   80% {
     border-radius: 100%;
-    transform: scale(1);
   }
   100% {
-    top: -50%;
     height: 100%;
-    padding-bottom: 0;
     border-radius: 0;
     transform: scale(2);
   }
@@ -33,17 +27,11 @@
     transform: scale(0.5);
     border-radius: 100%;
   }
-  60% {
-    transform: scale(0.4);
-  }
   80% {
     border-radius: 100%;
-    transform: scale(1);
   }
   100% {
-    top: -50%;
     height: 100%;
-    padding-bottom: 0;
     border-radius: 0;
     transform: scale(2);
   }
@@ -409,8 +397,8 @@ header nav ul li a:hover {
   transform: none;
 }
 #root .fixed-nav.show::before {
-  -webkit-animation: menuAni 1s ease-in;
-          animation: menuAni 1s ease-in;
+  -webkit-animation: menuAni 1s cubic-bezier(0.66, 0.01, 0.36, 1);
+          animation: menuAni 1s cubic-bezier(0.66, 0.01, 0.36, 1);
 }
 #root .fixed-nav::before {
   content: "";
@@ -664,17 +652,10 @@ header nav ul li a:hover {
   top: 0;
   left: 0;
   transition: top 0.7s;
-}
-#root .scrollBox-area .main-visual::before {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  content: "";
   background-image: url(../images/background_img.jpg);
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
 }
 #root .scrollBox-area .main-visual span {
   position: absolute;
@@ -710,6 +691,7 @@ header nav ul li a:hover {
   bottom: 20%;
   display: flex;
   flex-direction: column;
+  z-index: 11;
 }
 #root .scrollBox-area .main-visual section .word-box .word-line {
   display: flex;
